@@ -1,30 +1,17 @@
-// Running "fines raised while you read" counter.
-// Illustrative rate derived from publicly reported annual camera fine revenue.
-// Assumption is intentionally conservative and clearly labelled on the page.
+// Home-page running counter: "raised from camera fines while you read this page".
+// Rate is deliberately CONSERVATIVE and labelled illustrative on the page.
+// Basis: Victoria alone reported ~$473m in road-safety camera fine revenue in FY2023-24
+// (vic.gov.au). Queensland reported ~$464m the same year. A combined national figure
+// well over $1bn/yr is defensible; we use a conservative $1,000,000,000/yr here.
 (function () {
   const el = document.querySelector('.stat .num[data-target]');
   if (!el) return;
-
-  // ~ $400,000,000 / year in camera fine revenue (order-of-magnitude, illustrative)
-  // -> dollars per second
-  const PER_SECOND = 400_000_000 / (365 * 24 * 60 * 60); // ≈ $12.68/s
+  const PER_SECOND = 1_000_000_000 / (365 * 24 * 60 * 60); // ≈ $31.7/s
   const start = performance.now();
-
-  const fmt = (n) =>
-    '$' + Math.floor(n).toLocaleString('en-AU');
-
+  const fmt = (n) => '$' + Math.floor(n).toLocaleString('en-AU');
   function tick(now) {
-    const elapsed = (now - start) / 1000;
-    el.textContent = fmt(elapsed * PER_SECOND);
+    el.textContent = fmt(((now - start) / 1000) * PER_SECOND);
     requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
 })();
-
-// Label ledger rows for mobile stacked view
-document.querySelectorAll('.ledger .row:not(.head)').forEach((row) => {
-  const label = row.querySelector('span')?.textContent || '';
-  row.querySelectorAll('span').forEach((s, i) => {
-    if (i > 0) s.setAttribute('data-l', label);
-  });
-});
