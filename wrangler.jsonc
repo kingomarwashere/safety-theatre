@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "safety-theatre",
+  "compatibility_date": "2026-08-01",
+  // Pure static site served straight from Cloudflare's asset host — no Worker script needed.
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  }
+  // To attach a custom domain after first deploy, add e.g.:
+  // "routes": [{ "pattern": "safetytheatre.theradicalparty.com", "custom_domain": true }]
+}
