@@ -3,12 +3,12 @@
 (function () {
   const PAGES = [
     { href: '/', label: 'Home', key: 'home' },
-    { href: '/strategy.html', label: 'The Strategy', key: 'strategy' },
-    { href: '/money.html', label: 'The Money', key: 'money' },
-    { href: '/speed.html', label: 'Speed', key: 'speed' },
-    { href: '/surveillance.html', label: 'Surveillance', key: 'surveillance' },
-    { href: '/delegations.html', label: 'Delegations', key: 'delegations' },
-    { href: '/sources.html', label: 'Sources', key: 'sources' },
+    { href: '/strategy', label: 'The Strategy', key: 'strategy' },
+    { href: '/money', label: 'The Money', key: 'money' },
+    { href: '/speed', label: 'Speed', key: 'speed' },
+    { href: '/surveillance', label: 'Surveillance', key: 'surveillance' },
+    { href: '/delegations', label: 'Delegations', key: 'delegations' },
+    { href: '/sources', label: 'Sources', key: 'sources' },
   ];
   const current = document.body.getAttribute('data-page') || 'home';
 
@@ -32,7 +32,7 @@
       <a href="https://github.com/kingomarwashere/safety-theatre">Source / corrections</a>
     </div>
     <p class="fine">Public-record analysis and opinion — not legal advice. Every figure is drawn from
-       government audits, budget papers, legislation and reputable reporting; see <a href="/sources.html">Sources</a>.
+       government audits, budget papers, legislation and reputable reporting; see <a href="/sources">Sources</a>.
        Where a number is a government claim, contested, or illustrative, it is labelled as such.
        Verify against the primary source before relying on it. That's the whole point.</p>`;
   document.body.appendChild(footer);

@@ -5,7 +5,7 @@
   // Pure static multi-page site served straight from Cloudflare's asset host — no Worker script needed.
   "assets": {
     "directory": "./public",
-    "html_handling": "none",
+    "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
   "routes": [{ "pattern": "safetytheatre.theradicalparty.com", "custom_domain": true }]

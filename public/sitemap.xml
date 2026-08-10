@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://safetytheatre.theradicalparty.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/strategy.html</loc><priority>0.9</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/money.html</loc><priority>0.9</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/speed.html</loc><priority>0.9</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/surveillance.html</loc><priority>0.9</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/delegations.html</loc><priority>0.9</priority></url>
-  <url><loc>https://safetytheatre.theradicalparty.com/sources.html</loc><priority>0.8</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/strategy</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/money</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/speed</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/surveillance</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/delegations</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/sources</loc><priority>0.8</priority></url>
 </urlset>
