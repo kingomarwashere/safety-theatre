@@ -5,6 +5,7 @@
     { href: '/', label: 'Home', key: 'home' },
     { href: '/strategy', label: 'The Strategy', key: 'strategy' },
     { href: '/money', label: 'The Money', key: 'money' },
+    { href: '/tolls', label: 'Tolls', key: 'tolls' },
     { href: '/goldmines', label: 'Goldmines', key: 'goldmines' },
     { href: '/evidence', label: 'The Evidence', key: 'evidence' },
     { href: '/speed', label: 'Speed', key: 'speed' },
@@ -14,6 +15,9 @@
     { href: '/justice', label: 'Punishing the Poor', key: 'justice' },
     { href: '/drugs', label: 'Drug Testing', key: 'drugs' },
     { href: '/world', label: 'The World', key: 'world' },
+    { href: '/states', label: 'By State', key: 'states' },
+    { href: '/rights', label: 'Right to Drive?', key: 'rights' },
+    { href: '/act', label: 'Take Action', key: 'act' },
     { href: '/delegations', label: 'The Law', key: 'delegations' },
     { href: '/sources', label: 'Sources', key: 'sources' },
   ];
@@ -43,4 +47,10 @@
        see <a href="/sources">Sources</a>. Where a number is a government claim, contested, or
        illustrative, it is labelled as such. Verify against the primary source before relying on it.</p>`;
   document.body.appendChild(footer);
+
+  // Radical Party shared cross-subdomain wayfinding footer (so this site isn't a dead end).
+  var rf = document.createElement('script');
+  rf.src = 'https://theradicalparty.com/footer.js';
+  rf.defer = true;
+  document.body.appendChild(rf);
 })();
