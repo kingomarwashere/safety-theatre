@@ -19,6 +19,8 @@
     { href: '/rights', label: 'Right to Drive?', key: 'rights' },
     { href: '/act', label: 'Take Action', key: 'act' },
     { href: '/delegations', label: 'The Law', key: 'delegations' },
+    { href: '/court', label: 'The Court Trap', key: 'court' },
+    { href: '/solutions', label: 'What Works', key: 'solutions' },
     { href: '/sources', label: 'Sources', key: 'sources' },
   ];
   const current = document.body.getAttribute('data-page') || 'home';
