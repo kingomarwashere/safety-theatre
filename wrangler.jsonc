@@ -5,9 +5,8 @@
   // Pure static multi-page site served straight from Cloudflare's asset host — no Worker script needed.
   "assets": {
     "directory": "./public",
-    "html_handling": "auto-trailing-slash",
+    "html_handling": "none",
     "not_found_handling": "404-page"
-  }
-  // To attach a custom domain after first deploy, add e.g.:
-  // "routes": [{ "pattern": "safetytheatre.theradicalparty.com", "custom_domain": true }]
+  },
+  "routes": [{ "pattern": "safetytheatre.theradicalparty.com", "custom_domain": true }]
 }
