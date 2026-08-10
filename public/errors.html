@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faults & Errors — when the infallible machine gets it wrong | Safety Theatre</title>
+<meta name="description" content="Ransomware infected Victoria's cameras in 2017. NSW refunded nearly 19,000 wrongful fines in three years. A 1975 Datsun was clocked at a speed it couldn't reach. The machine is not infallible — but the onus is on you." />
+<meta name="theme-color" content="#0B0B09" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body data-page="errors">
+
+<section class="phead">
+  <p class="kicker">Part · Faults &amp; Errors</p>
+  <h1>The infallible machine that isn't.</h1>
+  <p class="sub">
+    Camera fines arrive with the authority of a machine that "doesn't lie." But cameras have been
+    hacked, mis-calibrated, and caught fining cars for speeds they can't physically reach — and the
+    burden of proving the error is dumped on you.
+  </p>
+</section>
+
+<main>
+<section class="block">
+  <h2>When ransomware hit the cameras</h2>
+  <p>
+    In June 2017 the <strong>WannaCry ransomware</strong> infected Victoria's fixed road-safety camera
+    network after a maintenance contractor plugged in an infected USB stick.
+  </p>
+  <div class="tablewrap">
+    <table class="ledger">
+      <thead><tr><th>Detail</th><th>Figure</th></tr></thead>
+      <tbody>
+        <tr><td>Camera devices infected</td><td class="num-c">110 (43 Redflex + 67 Jenoptik)</td></tr>
+        <tr><td>Cameras potentially exposed</td><td class="num-c">up to 280</td></tr>
+        <tr><td>Fines suspended as a precaution</td><td class="num-c">~8,000</td></tr>
+        <tr><td>Fines withdrawn</td><td class="num-c">1,643</td></tr>
+        <tr><td>Fines embargoed pending review</td><td class="num-c">5,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Authorities said there was no evidence the ransomware had altered any fine's accuracy — the tickets
+    were cancelled "to preserve public confidence." Which rather concedes the point: public confidence
+    in automated fines rests on the assumption the system is clean, and that assumption had just been
+    broken.
+  </p>
+  <p class="src">Sources: <a href="https://www.itnews.com.au/news/vic-tightens-speed-camera-security-after-wannacry-scare-491618">iTnews</a>; <a href="https://globalnews.ca/news/3553543/camera-traffic-tickets-withdrawn-australia-wannacry-virus/">Global News</a>; Victorian Road Safety Camera Commissioner report, <em>WannaCry malware infection</em> (2018).</p>
+</section>
+
+<section class="block alt">
+  <h2>Nearly 19,000 wrong fines — in one state, in three years</h2>
+  <ul>
+    <li><strong>NSW, Jul 2007 – May 2010:</strong> the state refunded <strong>18,944</strong> inaccurate or illegally issued camera tickets worth <strong>$3.79 million</strong>, across <strong>148 separate incidents</strong>. One location alone (King Georges Road, Beverly Hills) accounted for 5,279 tickets and ~$888,000.</li>
+    <li><strong>Victoria, 2004–2006:</strong> authorities <strong>secretly deactivated</strong> cameras they knew were faulty and admitted 1,130 motorists were falsely accused. The West Gate Bridge cameras were quietly disabled after 4,243 citations — the assistant commissioner: "if we can't be absolutely sure, let's not infringe."</li>
+    <li><strong>The impossible speed:</strong> a Victorian camera clocked a <strong>1975 Datsun 120Y at 98 mph</strong> — a car whose top speed was about 73 mph — blamed on faulty in-ground sensors. Officials initially insisted on the fine.</li>
+  </ul>
+  <p class="src">Sources: <a href="https://www.thenewspaper.com/news/32/3255.asp">NSW refunds (documents released by the then-Opposition)</a>; <a href="https://www.thenewspaper.com/news/23/2384.asp">Victoria faulty cameras / Datsun / West Gate</a>. Some single-outlet specifics are reported figures; treat exact totals as "as reported."</p>
+</section>
+
+<section class="block">
+  <h2>The machine is not conclusive — a court said so</h2>
+  <p>
+    In <strong><em>RTA of NSW v Michell</em> (2006)</strong>, the NSW Supreme Court dismissed the roads
+    authority's appeal against an acquittal. The camera image lacked a legally required security
+    indicator (proof the image wasn't altered), and Justice Adams held this could ground reasonable
+    doubt <em>even with no contrary evidence from the driver</em>:
+  </p>
+  <blockquote>
+    Computer processes "can go awry," and a "tribunal of fact is still bound … to consider the quality
+    of that evidence."
+    <cite>— Adams J, RTA of NSW v Michell (2006)</cite>
+  </blockquote>
+  <p>
+    In other words, a camera certificate is evidence — not automatic guilt. But most people never test
+    that, because of how the system is built (see below, and <a href="/delegations">The Law</a>).
+  </p>
+  <p class="src">Source: <a href="https://www.thenewspaper.com/news/10/1037.asp">RTA v Michell (2006) NSWSC</a>.</p>
+</section>
+
+<section class="block alt">
+  <h2>The AI that "sees" a phone — and sometimes a sandwich</h2>
+  <p>
+    Mobile-phone detection cameras use AI to flag drivers, with a human reviewing before a fine issues.
+    Reported grounds for successful challenges include a phone sitting untouched, a reflection or object
+    misread as a phone, adjusting the air vents — even a hand near the face. The vendor's "95% capture"
+    figure is a <em>design target</em>, not an independently verified false-positive rate.
+  </p>
+  <p class="callout warn">
+    <span class="h">The transparency hole</span>
+    Here's what's genuinely damning: <strong>no Australian authority publishes a false-positive rate or
+    the proportion of contested camera fines that get withdrawn.</strong> NSW even hosts a dataset on
+    fine reviews and waivers — but the headline error rate isn't advertised. Combined with owner-onus
+    (you're presumed liable and must actively contest), the rational move for most people is to just pay.
+    A system that profits from people <em>not</em> checking its accuracy has little reason to publish it.
+  </p>
+  <p class="src">Sources: NSW review/waiver data — <a href="https://www.data.nsw.gov.au/data/dataset/be766026-4174-4e3e-88b4-ef7d67acd32f">data.nsw.gov.au</a>; <a href="https://www.aap.com.au/factcheck/photo-evidence-claim-tampers-with-the-truth/">AAP FactCheck (enhanced images admissible)</a>. No official false-positive rate exists in public sources — a prime FOI/GIPA target.</p>
+</section>
+</main>
+
+<nav class="pagenav">
+  <a href="/corruption"><span class="dir">← Previous</span>Contracts &amp; Corruption</a>
+  <a class="nx" href="/justice"><span class="dir">Next →</span>Punishing the Poor</a>
+</nav>
+
+<script src="/partials.js"></script>
+</body>
+</html>

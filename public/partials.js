@@ -1,13 +1,20 @@
-// Shared nav + footer, injected so the 7 pages stay in sync.
+// Shared nav + footer, injected so all pages stay in sync.
 // Page content itself lives in each page's HTML (crawlable); only chrome is injected.
 (function () {
   const PAGES = [
     { href: '/', label: 'Home', key: 'home' },
     { href: '/strategy', label: 'The Strategy', key: 'strategy' },
     { href: '/money', label: 'The Money', key: 'money' },
+    { href: '/goldmines', label: 'Goldmines', key: 'goldmines' },
+    { href: '/evidence', label: 'The Evidence', key: 'evidence' },
     { href: '/speed', label: 'Speed', key: 'speed' },
     { href: '/surveillance', label: 'Surveillance', key: 'surveillance' },
-    { href: '/delegations', label: 'Delegations', key: 'delegations' },
+    { href: '/corruption', label: 'Contracts', key: 'corruption' },
+    { href: '/errors', label: 'Errors', key: 'errors' },
+    { href: '/justice', label: 'Punishing the Poor', key: 'justice' },
+    { href: '/drugs', label: 'Drug Testing', key: 'drugs' },
+    { href: '/world', label: 'The World', key: 'world' },
+    { href: '/delegations', label: 'The Law', key: 'delegations' },
     { href: '/sources', label: 'Sources', key: 'sources' },
   ];
   const current = document.body.getAttribute('data-page') || 'home';
@@ -32,8 +39,8 @@
       <a href="https://github.com/kingomarwashere/safety-theatre">Source / corrections</a>
     </div>
     <p class="fine">Public-record analysis and opinion — not legal advice. Every figure is drawn from
-       government audits, budget papers, legislation and reputable reporting; see <a href="/sources">Sources</a>.
-       Where a number is a government claim, contested, or illustrative, it is labelled as such.
-       Verify against the primary source before relying on it. That's the whole point.</p>`;
+       government audits, budget papers, legislation, peer-reviewed studies and reputable reporting;
+       see <a href="/sources">Sources</a>. Where a number is a government claim, contested, or
+       illustrative, it is labelled as such. Verify against the primary source before relying on it.</p>`;
   document.body.appendChild(footer);
 })();
