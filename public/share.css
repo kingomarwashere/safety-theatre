@@ -1,0 +1,79 @@
+/* ============================================================
+   Shareables — self-contained, screenshot/download-ready cards.
+   Fonts are SELF-HOSTED (same-origin) so html-to-image can embed
+   them into the exported PNG. Cards render at full social res
+   (1080–1200px) and are scaled down for on-page display.
+   ============================================================ */
+
+@font-face{font-family:'Syne';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/syne-700.woff2) format('woff2')}
+@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/syne-800.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/plexmono-500.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/inter-600.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/inter-700.woff2) format('woff2')}
+
+/* ---- tools bar ---- */
+.share-tools{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;justify-content:space-between;margin:0 0 2.2rem;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:12px;background:#100f0c}
+.fmt-switch{display:inline-flex;gap:.35rem;background:#0B0B09;border:1px solid var(--line);border-radius:9px;padding:.3rem}
+.fmt-switch button{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);background:transparent;border:0;border-radius:6px;padding:.5rem .8rem;cursor:pointer;transition:.15s}
+.fmt-switch button:hover{color:var(--ink)}
+.fmt-switch button[aria-pressed="true"]{background:var(--red);color:#0B0B09;font-weight:600}
+.share-note{font-size:.9rem;color:var(--muted);max-width:46ch}
+.share-note b{color:var(--ink)}
+
+/* ---- gallery ---- */
+.gallery{--s:.34;display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;align-items:flex-start}
+@media(max-width:520px){.gallery{--s:.28}}
+.cardwrap{display:flex;flex-direction:column;gap:.6rem}
+.frame{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+[data-fmt="square"] .frame{width:calc(1080px*var(--s));height:calc(1080px*var(--s))}
+[data-fmt="story"]  .frame{width:calc(1080px*var(--s));height:calc(1920px*var(--s))}
+[data-fmt="wide"]   .frame{width:calc(1200px*var(--s));height:calc(675px*var(--s))}
+.cardbtns{display:flex;gap:.5rem}
+.cardbtns button{flex:1;font-family:var(--mono);font-size:.76rem;letter-spacing:.03em;color:var(--ink);background:#161511;border:1px solid var(--line);border-radius:7px;padding:.55rem;cursor:pointer;transition:.15s}
+.cardbtns button:hover{border-color:var(--red);color:var(--red)}
+.cardbtns button.ok{border-color:var(--green);color:var(--green)}
+
+/* ---- the card itself (full social resolution) ---- */
+.sc{position:absolute;top:0;left:0;transform-origin:top left;transform:scale(var(--s));box-sizing:border-box;display:flex;flex-direction:column;background:#0B0B09;color:#F7F3EA;overflow:hidden;font-family:'Inter',system-ui,sans-serif}
+.sc::before{content:"";position:absolute;top:-30%;right:-25%;width:70%;height:70%;background:radial-gradient(circle,rgba(255,45,85,.18),transparent 65%);pointer-events:none}
+[data-fmt="square"] .sc{width:1080px;height:1080px;padding:84px}
+[data-fmt="story"]  .sc{width:1080px;height:1920px;padding:110px 84px}
+[data-fmt="wide"]   .sc{width:1200px;height:675px;padding:60px 72px}
+
+.sc-top{display:flex;justify-content:space-between;align-items:center;gap:20px;position:relative;z-index:1}
+.sc-brand{font-family:'Syne';font-weight:800;letter-spacing:.16em;font-size:30px;white-space:nowrap}
+.sc-brand span{color:var(--red)}
+.sc-cat{font-family:'IBM Plex Mono';font-weight:500;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#0B0B09;background:var(--red);padding:9px 16px;border-radius:7px;white-space:nowrap}
+
+.sc-mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;position:relative;z-index:1}
+.sc-num{font-family:'Syne';font-weight:800;line-height:.9;color:var(--red);letter-spacing:-.02em;white-space:nowrap}
+.sc-num{font-size:154px}
+.sc-num.mid{font-size:118px}
+.sc-num.sm{font-size:84px}
+.sc-head{font-family:'Syne';font-weight:700;font-size:60px;line-height:1.06;max-width:20ch}
+.sc-head em{color:var(--red);font-style:normal;text-decoration:line-through;text-decoration-thickness:5px}
+.sc-sub{font-family:'Inter';font-weight:500;font-size:31px;line-height:1.42;color:#cfc9bc;max-width:34ch}
+
+.sc-foot{position:relative;z-index:1;border-top:2px solid #2b2822;padding-top:26px;display:flex;flex-direction:column;gap:8px}
+.sc-src{font-family:'IBM Plex Mono';font-weight:500;font-size:21px;color:#a49e91;line-height:1.4}
+.sc-src span{color:var(--red);letter-spacing:.08em}
+.sc-url{font-family:'IBM Plex Mono';font-weight:500;font-size:25px;color:#F7F3EA;letter-spacing:.01em}
+.sc-url b{color:var(--red);font-weight:500}
+
+/* story = more headroom, go bigger */
+/* story shares the 1080px width, so numbers stay the same size —
+   the extra height goes into larger headline/subline + breathing room */
+[data-fmt="story"] .sc-head{font-size:68px}
+[data-fmt="story"] .sc-sub{font-size:35px}
+[data-fmt="story"] .sc-mid{gap:34px}
+
+/* wide = less height, scale everything down */
+[data-fmt="wide"] .sc-num{font-size:126px}
+[data-fmt="wide"] .sc-num.mid{font-size:94px}
+[data-fmt="wide"] .sc-num.sm{font-size:62px}
+[data-fmt="wide"] .sc-head{font-size:42px}
+[data-fmt="wide"] .sc-sub{font-size:24px}
+[data-fmt="wide"] .sc-brand{font-size:24px}
+[data-fmt="wide"] .sc-cat{font-size:18px;padding:7px 13px}
+[data-fmt="wide"] .sc-mid{gap:14px}
+[data-fmt="wide"] .sc-foot{padding-top:18px}
