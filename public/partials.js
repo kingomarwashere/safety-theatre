@@ -10,6 +10,7 @@
     { href: '/evidence', label: 'The Evidence', key: 'evidence' },
     { href: '/speed', label: 'Speed', key: 'speed' },
     { href: '/surveillance', label: 'Surveillance', key: 'surveillance' },
+    { href: '/cameras', label: 'Cabin Cameras', key: 'cameras' },
     { href: '/corruption', label: 'Contracts', key: 'corruption' },
     { href: '/errors', label: 'Errors', key: 'errors' },
     { href: '/justice', label: 'Punishing the Poor', key: 'justice' },

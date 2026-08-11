@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cabin Cameras — an AI camera inside every car | Safety Theatre</title>
+<meta name="description" content="Mobile-phone and seatbelt detection cameras photograph the inside of every passing car and run the images through AI. Australia was the world-first adopter. Here's the fine revenue, the go-live spikes, the accountability gaps and the function creep — with sources." />
+<meta name="theme-color" content="#0B0B09" />
+<meta property="og:title" content="Cabin Cameras — an AI camera inside every car" />
+<meta property="og:description" content="Phone and seatbelt detection cameras photograph inside every car and run it through AI. The revenue, the go-live spikes and the accountability gaps — with receipts." />
+<meta property="og:type" content="article" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body data-page="cameras">
+
+<section class="phead">
+  <p class="kicker">Part · Cabin Cameras</p>
+  <h1>A camera inside every car.</h1>
+  <p class="sub">
+    Speed cameras watch the road. This newer generation watches <em>you</em> — photographing the
+    front cabin of every vehicle that passes and running the image through AI to look for a phone in
+    your hand or a seatbelt off your shoulder. Australia was the <strong>world's first</strong> to
+    deploy them. They are being bolted, one offence at a time, onto a network that scans everyone.
+  </p>
+</section>
+
+<main>
+<section class="block">
+  <h2>What it actually does</h2>
+  <p>
+    NSW switched on the world's first mobile-phone detection cameras in a trial from
+    <strong>December 2019</strong>, with fines from <strong>1 March 2020</strong>. Each camera
+    photographs <em>every</em> vehicle — capturing the number plate and a high-definition image of
+    the front seats — and an algorithm flags the ones it thinks show an offence. By the state's own
+    account the NSW network is scaled to check on the order of <strong>135 million vehicles a
+    year</strong>.
+  </p>
+  <blockquote>
+    "The cameras take multiple images of every vehicle that passes… Images where no offence is
+    detected are automatically excluded and deleted."
+    <cite>— Queensland Government, road-safety camera page</cite>
+  </blockquote>
+  <p>
+    That is the reassurance: the machine looks at everyone, but only "keeps" the guilty. The catch is
+    that <em>you</em> can't audit it — you never see the images that were taken and deleted, and no
+    government publishes how often the AI gets it wrong <a href="#gaps">(see below)</a>.
+  </p>
+  <div class="figure">
+    <div class="n">$423</div>
+    <div class="d">The standard NSW mobile-phone fine (<strong>$562</strong> in a school zone), plus
+    <strong>5 demerit points</strong> — 10 in a double-demerit period. In <strong>2022–23</strong> the
+    NSW cameras issued <strong>208,600+</strong> phone fines worth <strong>$67.3 million</strong>,
+    all funnelled to the Community Road Safety Fund. <span class="tag reported">reported</span></div>
+  </div>
+  <p class="src">Sources: <a href="https://www.transport.nsw.gov.au/roadsafety/topics-tips/mobile-phones">Transport for NSW</a>; <a href="https://www.nrspp.org.au/mobile-phone-detection-cameras-everything-you-need-to-know/">NRSPP</a>; <a href="https://www.qld.gov.au/transport/safety/fines/cameras">Queensland Government</a>; fine and revenue figures via <a href="https://www.mynrma.com.au/open-road/advice-and-how-to/road-safety/mobile-phone-detection-cameras">NRMA</a>.</p>
+</section>
+
+<section class="block alt">
+  <h2>From one state to the whole country</h2>
+  <p>
+    What began as a NSW experiment is now a near-national grid, mostly built on the same Australian
+    technology (Acusensus). Note the pattern: almost every state added <strong>seatbelt detection</strong>
+    to the same hardware within a couple of years — the infrastructure sold to stop texting quietly
+    grew a second job.
+  </p>
+  <div class="tablewrap">
+    <table class="ledger">
+      <thead><tr><th>Jurisdiction</th><th>Fines from</th><th>Phone fine</th><th>Seatbelt AI?</th></tr></thead>
+      <tbody>
+        <tr><td>NSW</td><td>Mar 2020</td><td class="num-c">$423</td><td>Yes — Jul 2024</td></tr>
+        <tr><td>QLD</td><td>Nov 2021</td><td class="num-c">$1,209*</td><td>Yes — from launch</td></tr>
+        <tr><td>VIC</td><td>Jul 2023</td><td class="num-c">~$556</td><td>Yes — from launch</td></tr>
+        <tr><td>WA</td><td>2024</td><td class="num-c">up to $1,000</td><td>Yes</td></tr>
+        <tr><td>SA</td><td>Sep 2024</td><td class="num-c">$556 + levy</td><td>Rolling out</td></tr>
+        <tr><td>ACT</td><td>Feb 2024</td><td class="num-c">$514–$674</td><td>Yes — Nov 2025</td></tr>
+        <tr><td>TAS</td><td>Trial phase</td><td class="num-c">$410</td><td>Not at scale</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">
+    Dates and amounts vary by financial year and use-type; several are indexed annually. QLD runs the
+    country's harshest penalty (*fine amount rises each July). <span class="tag reported">reported</span>
+    — Sources: <a href="https://www.carexpert.com.au/car-news/which-australian-states-and-territories-use-mobile-phone-cameras">CarExpert (state-by-state)</a>; <a href="https://www.qld.gov.au/transport/safety/fines/cameras">QLD Government</a>; <a href="https://www.vic.gov.au/mobile-phone-and-seatbelt-detection-cameras">Victorian Government</a>. Tasmania details are thin and are flagged <span class="tag contested">contested</span>.
+  </p>
+</section>
+
+<section class="block">
+  <h2>The go-live spike</h2>
+  <p>
+    If these cameras were purely a deterrent, switching them on would be uneventful. Instead, every
+    "go live" is a revenue event — and the clearest proof is what happens during the <em>warning</em>
+    period, when the machine counts offences it isn't yet fining.
+  </p>
+  <div class="tablewrap">
+    <table class="ledger">
+      <thead><tr><th>Jurisdiction</th><th>Warning period</th><th>What it recorded</th></tr></thead>
+      <tbody>
+        <tr><td>WA</td><td>8 months, no fines</td><td class="num-c">380,000+ breaches</td></tr>
+        <tr><td>SA</td><td>~3 months</td><td class="num-c">64,454 warnings</td></tr>
+        <tr><td>QLD</td><td>~3 months</td><td class="num-c">21,599 warnings</td></tr>
+        <tr><td>NSW (seatbelt)</td><td><strong>none</strong></td><td class="num-c">11,400 fines / 21 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    NSW gave seatbelt detection <strong>no grace period at all</strong>. In the first
+    <strong>21 days</strong> it issued over <strong>11,400 penalties</strong> — about
+    <strong>75% for wearing a belt <em>incorrectly</em></strong> (still the full $410 fine and 3
+    points) — and in three weeks detected more seatbelt offences than <em>the entire NSW Police
+    force</em> issued in all of 2023. WA's cameras, meanwhile, quietly logged
+    <strong>380,000+</strong> breaches during an 8-month grace window before a single fine was posted.
+    The "safety warning" period is really a demonstration of the revenue pipeline about to be switched on.
+  </p>
+  <p class="src">Sources: <a href="https://www.transport.nsw.gov.au/system/files/media/documents/2024/Media_release_Seatbelt_cameras_reveal_alarming_rate_of_offences.pdf">Transport for NSW media release (4 Aug 2024, PDF)</a>; WA/SA/QLD warning-period figures via <a href="https://www.carexpert.com.au/car-news/which-australian-states-and-territories-use-mobile-phone-cameras">CarExpert</a> and state media releases. <span class="tag verified">verified</span> (NSW) · <span class="tag reported">reported</span> (WA/SA/QLD).</p>
+</section>
+
+<section id="gaps" class="block alt">
+  <h2>The accountability you're not allowed to see</h2>
+  <p>
+    A system that photographs the inside of every car, decides guilt by algorithm, and reverses the
+    burden of proof onto you ought to be the most transparent machine in the state. It is one of the
+    least.
+  </p>
+  <ul class="checklist bad">
+    <li><strong>No published error rate — anywhere.</strong> Not one Australian jurisdiction publishes
+      the AI's false-positive rate or how often fines are withdrawn on appeal. You are told the system
+      is accurate; you cannot check it.</li>
+    <li><strong>The ethics check that wasn't done.</strong> The <strong>Queensland Audit Office</strong>
+      found in <strong>September 2025</strong> that the phone-and-seatbelt camera program had
+      <em>not completed the ethical risk assessment</em> required under the state's own AI Ethics
+      Framework — meaning "potential ethical dangers remain unidentified and unmanaged" — even as it
+      issued roughly 114,000 fines in a year.</li>
+    <li><strong>Guilty until you prove otherwise.</strong> Under owner-onus law the driver must prove
+      the object in their hand was <em>not</em> a phone — a reverse burden the NSW Council for Civil
+      Liberties warned about before the scheme even began.</li>
+    <li><strong>Wrong for half a year.</strong> A Canberra couple spent <strong>190+ days</strong>
+      fighting a seatbelt fine before Access Canberra admitted it was "issued to you incorrectly" —
+      a "technical error" it never explained.</li>
+  </ul>
+  <blockquote>
+    "There is a lack of any clear proposals… as to how the captured data may be used, accessed, stored
+    or when it will be deleted."
+    <cite>— NSW Council for Civil Liberties, on the detection-camera bill (2019)</cite>
+  </blockquote>
+  <p class="src">Sources: <a href="https://www.itnews.com.au/news/qld-ai-traffic-cameras-flagged-over-missing-ethical-checks-620568">iTnews — Queensland Audit Office finding (26 Sep 2025)</a>; <a href="https://www.nswccl.org.au/nsw_mobile_phone_detection_bill_flawed">NSW Council for Civil Liberties (15 Nov 2019)</a>; ACT wrongful-fine case via Canberra reporting (2026). <span class="tag verified">verified</span> (QLD audit, NSWCCL).</p>
+</section>
+
+<section class="block">
+  <h2>The same hardware, more and more jobs</h2>
+  <p>
+    The honest way to see this technology is as a general-purpose <em>cabin and plate scanner</em> that
+    happens to have started with phones. The same Acusensus units already read number plates to catch
+    unregistered and speeding vehicles; seatbelts were added by software; average-speed timing rides
+    on the same poles. Each new offence is a small, reasonable-sounding extension — and each one
+    normalises a camera pointed inside your car.
+  </p>
+  <div class="vs">
+    <div class="claim-side">
+      <h4>Sold as</h4>
+      <p>A narrow tool to stop people texting at the wheel — "if you've done nothing wrong, you've
+      nothing to fear."</p>
+    </div>
+    <div class="real-side">
+      <h4>Actually</h4>
+      <p>A multi-function scanner — phone, seatbelt, registration, speed — photographing every cabin,
+      run by <strong>private operators</strong> on contracts worth tens of millions
+      (NSW ~$88m; QLD signed a $27.4m extension in Dec 2024), with the images you never see.</p>
+    </div>
+  </div>
+  <p class="callout warn">
+    <span class="h">What we're not claiming</span>
+    We have found no confirmed case of these cabin images being handed to police for an unrelated
+    investigation — the function creep so far is <em>offence-type</em> expansion, not cross-agency
+    data use. And there is no reliable public "total revenue since 2020" figure, so we quote only the
+    per-year numbers governments have released. The point isn't a single scandal; it's that a
+    watch-everyone camera has been built with almost none of the transparency that watching everyone
+    should require. See the receipts on <a href="/sources#cameras">Sources</a>.
+  </p>
+  <p class="src">Sources: <a href="https://www.itnews.com.au/news/tfnsw-extends-deal-for-mobile-phone-detection-cameras-602910">iTnews — TfNSW/Acusensus contract</a>; QLD extension via state procurement reporting (Dec 2024). Cross-references: <a href="/surveillance">Surveillance — the grid</a>, <a href="/errors">Faults &amp; Errors</a>.</p>
+</section>
+</main>
+
+<nav class="pagenav">
+  <a href="/surveillance"><span class="dir">← Previous</span>Surveillance — the grid</a>
+  <a class="nx" href="/corruption"><span class="dir">Next →</span>Contracts &amp; Corruption</a>
+</nav>
+
+<script src="/partials.js"></script>
+</body>
+</html>

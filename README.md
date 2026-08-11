@@ -7,17 +7,21 @@ crash data and legislation actually show.
 **Live (once deployed):** `safetytheatre.theradicalparty.com`
 **Source / corrections:** https://github.com/kingomarwashere/safety-theatre
 
-## The argument, in six pages
+## The argument
+
+The site has grown into a ~20-part exposé. The canonical page list (and order) lives in
+`public/partials.js` and `public/sitemap.xml`; a few anchors:
 
 | Page | Thesis |
 |---|---|
 | **Home** (`index.html`) | The four-card trick + the one chart they can't spin (rising toll) |
 | **The Strategy** (`strategy.html`) | A plan to halve deaths, missing by ~20% and rising; only 2 of 5 targets can be measured |
-| **The Money** (`money.html`) | Camera revenue by state (VIC $473m, QLD $464m), budgeted to grow; the NSW warning-sign spike; "safety funds" left unspent |
+| **The Money** (`money.html`) | Camera revenue by state, budgeted to grow; the NSW warning-sign spike; "safety funds" left unspent |
 | **Speed** (`speed.html`) | "Speed kills" conflates over-limit + too-fast-for-conditions; the missing statistic; tolerances; Kloeden & Solomon, both ways |
 | **Surveillance** (`surveillance.html`) | ANPR (16 plates/sec), in-cabin AI cameras, average-speed "function creep", private operators, retention |
-| **Delegations** (`delegations.html`) | Fine amounts, device definitions and owner-onus set by regulation, not voted; reverse onus; administrative suspension |
-| **Sources** (`sources.html`) | Every audit, budget paper, Act and report, grouped by topic |
+| **Cabin Cameras** (`cameras.html`) | Phone + seatbelt AI cameras photograph inside every car; go-live revenue spikes (NSW seatbelt: 11,400 fines in 21 days, no grace period); the ethics check QLD's auditor found was never done; no published error rate |
+| **The Law** (`delegations.html`) | Fine amounts, device definitions and owner-onus set by regulation, not voted; reverse onus; administrative suspension |
+| **Sources** (`sources.html`) | Every audit, budget paper, Act, study and report, grouped by topic |
 
 ## Editorial integrity
 
