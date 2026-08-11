@@ -37,6 +37,34 @@
     `<a class="brand" href="/">SAFETY<span>&nbsp;</span>THEATRE</a><nav>${links}</nav>`;
   document.body.insertBefore(header, document.body.firstChild);
 
+  // Site-wide consent / direct-democracy call-to-action (before the footer, every page).
+  const cta = document.createElement('section');
+  cta.className = 'consent-cta';
+  cta.innerHTML = `
+    <div class="consent-inner">
+      <p class="k">You didn't vote for this</p>
+      <h2>None of this was ever put to a vote.</h2>
+      <p>The fines, the secret tolerances, the cameras that photograph inside your car, the
+         number-plate dragnet, and the "safety" fund that quietly recycles your money back into
+         more of it — almost none of it was debated in Parliament, let alone put to the public. It's
+         set by <a href="/delegations">regulation and agency policy</a> and waved through. No election
+         ever asked you, and you were never asked to consent.</p>
+      <p><strong>The Radical Party exists to fix exactly that.</strong> Direct, radical democracy: you
+         vote on the <em>policies</em>, not just the politicians — propose them, vote them in, and
+         <em>veto</em> the ones done to you without consent. This site is one receipt; the point is to
+         change who gets to decide.</p>
+      <div class="btnrow">
+        <a class="btn" href="https://theradicalparty.com/join">Join the Radical Party →</a>
+        <a class="btn ghost" href="https://theradicalparty.com">What is direct democracy?</a>
+      </div>
+      <p class="whistle"><b>Work inside this system?</b> We work with government whistleblowers. If you
+         have documents, data or insight that could help end this — from inside a police force, a
+         transport agency, a camera contractor or a minister's office — reach us confidentially at
+         <a href="mailto:whistle@theradicalparty.com">whistle@theradicalparty.com</a>. Every figure on
+         this site came from the public record; the next one could come from you.</p>
+    </div>`;
+  document.body.appendChild(cta);
+
   const footer = document.createElement('footer');
   footer.innerHTML = `
     <p class="foot-brand">SAFETY<span> </span>THEATRE</p>
