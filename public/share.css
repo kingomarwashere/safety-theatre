@@ -53,6 +53,11 @@
 .sc-head{font-family:'Syne';font-weight:700;font-size:60px;line-height:1.06;max-width:20ch}
 .sc-head em{color:var(--red);font-style:normal;text-decoration:line-through;text-decoration-thickness:5px}
 .sc-sub{font-family:'Inter';font-weight:500;font-size:31px;line-height:1.42;color:#cfc9bc;max-width:34ch}
+.sc-hook{font-family:'IBM Plex Mono';font-weight:600;font-size:27px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:-6px}
+
+/* background "image" — a bold line-icon watermark per card */
+.sc-bg{position:absolute;right:-6%;bottom:-8%;width:58%;color:var(--red);opacity:.11;z-index:0;pointer-events:none}
+.sc-bg svg{width:100%;height:auto;display:block;transform:rotate(-8deg)}
 
 .sc-foot{position:relative;z-index:1;border-top:2px solid #2b2822;padding-top:26px;display:flex;flex-direction:column;gap:8px}
 .sc-src{font-family:'IBM Plex Mono';font-weight:500;font-size:21px;color:#a49e91;line-height:1.4}
@@ -66,11 +71,15 @@
 [data-fmt="story"] .sc-head{font-size:68px}
 [data-fmt="story"] .sc-sub{font-size:35px}
 [data-fmt="story"] .sc-mid{gap:34px}
+[data-fmt="story"] .sc-hook{font-size:31px;margin-bottom:-10px}
+[data-fmt="story"] .sc-bg{width:62%;bottom:-6%}
 
 /* wide = less height, scale everything down */
 [data-fmt="wide"] .sc-num{font-size:126px}
 [data-fmt="wide"] .sc-num.mid{font-size:94px}
 [data-fmt="wide"] .sc-num.sm{font-size:62px}
+[data-fmt="wide"] .sc-hook{font-size:18px;margin-bottom:-2px}
+[data-fmt="wide"] .sc-bg{width:42%;right:-3%;bottom:-11%}
 [data-fmt="wide"] .sc-head{font-size:42px}
 [data-fmt="wide"] .sc-sub{font-size:24px}
 [data-fmt="wide"] .sc-brand{font-size:24px}
