@@ -37,6 +37,21 @@
       sub: 'NSW hid its mobile speed cameras in 2020. Low-range fines soared — then fell ~90% the moment the signs returned in 2023.',
       src: 'Revenue NSW / Transport for NSW', page: 'money' },
 
+    { cat: 'The Fund', num: '~10%', size: '',
+      head: 'Of the police budget — from cameras alone.',
+      sub: "Victoria's road-safety cameras raised $473m in a year — about a tenth of what it costs to run the entire state police force. Fines that big stop being about safety.",
+      src: 'Victorian Govt / Victoria Police Annual Report 2024-25', page: 'fund' },
+
+    { cat: 'The Fund', num: '$118m', size: '',
+      head: 'Fine money spent running MORE cameras.',
+      sub: "In one year NSW's road-safety fund spent $118.4m operating the camera program itself — plus $36.7m on police. The enforcement pays for the enforcement.",
+      src: 'Transport for NSW Progress Report 2024', page: 'fund' },
+
+    { cat: 'The Fund', num: '$104m', size: '',
+      head: "'Safety' money collected — then NOT spent on safety.",
+      sub: "The NSW Auditor-General found the road-safety fund underspent by ~$104m in a single year; $73m wasn't allocated to any region at all.",
+      src: 'NSW Auditor-General (2023)', page: 'fund' },
+
     { cat: 'The Evidence', num: '15 of 33', size: 'mid',
       head: 'AI camera sites with NO crash record.',
       sub: "Victoria's Auditor-General found police 'cannot show' they checked crash history before siting cameras. If it's about crashes — why here?",

@@ -84,8 +84,64 @@
     host.appendChild(svg);
   }
 
+  // Camera fine revenue as a share of the state POLICE budget (the incentive, visualised).
+  function shareChart(host) {
+    var rows = [
+      { lab: 'Victoria', fines: 473, budget: 4500, pct: '≈10%', tag: 'verified',
+        note: 'camera fines $473m (2023-24) vs Victoria Police ~$4.5bn (2024-25)' },
+      { lab: 'NSW', fines: 636, budget: 5510, pct: '≈12%', tag: 'reported',
+        note: 'camera revenue ~$636m (2023-24) vs NSW Police ~$5.51bn (2024-25)' }
+    ];
+    var W = 820, rowH = 96, padL = 12, padR = 12, top = 8;
+    var H = top + rows.length * rowH + 8;
+    var trackW = W - padL - padR;
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, width: '100%', role: 'img',
+      'aria-label': 'Camera fine revenue as a share of state police budgets' });
+    rows.forEach(function (r, i) {
+      var y = top + i * rowH;
+      svg.appendChild(el('text', { x: padL, y: y + 16, fill: INK, 'font-size': 15, 'font-weight': 600, 'font-family': 'Syne, sans-serif' }, r.lab + ' Police budget'));
+      // full track = police budget
+      svg.appendChild(el('rect', { x: padL, y: y + 28, width: trackW, height: 34, rx: 4, fill: '#211d18' }));
+      // red slice = camera fines
+      var fw = Math.max(6, trackW * (r.fines / r.budget));
+      svg.appendChild(el('rect', { x: padL, y: y + 28, width: fw, height: 34, rx: 4, fill: RED }));
+      // pct label just past the slice
+      svg.appendChild(el('text', { x: padL + fw + 12, y: y + 50, fill: INK, 'font-size': 20, 'font-weight': 800, 'font-family': 'Syne, sans-serif' }, r.pct + ' from cameras'));
+      svg.appendChild(el('text', { x: padL, y: y + 82, fill: MUTED, 'font-size': 12.5, 'font-family': 'IBM Plex Mono, monospace' }, r.note + '  [' + r.tag + ']'));
+    });
+    host.appendChild(svg);
+  }
+
+  // NSW "Fines" revenue line, forward estimates — budgeted to climb, never to fall.
+  function forecastChart(host) {
+    var DATA = [['23-24', 713, 'actual'], ['24-25', 779, ''], ['25-26', 781, 'budget'],
+                ['26-27', 772, ''], ['27-28', 791, ''], ['28-29', 793, '']];
+    var W = 820, H = 320, padL = 54, padR = 20, padT = 30, padB = 46, maxY = 900;
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, width: '100%', role: 'img',
+      'aria-label': 'NSW forecast fines revenue 2023-24 to 2028-29' });
+    function Y(v) { return H - padB - v / maxY * (H - padT - padB); }
+    [0, 300, 600, 900].forEach(function (v) {
+      svg.appendChild(el('line', { x1: padL, y1: Y(v), x2: W - padR, y2: Y(v), stroke: LINE, 'stroke-width': 1 }));
+      svg.appendChild(el('text', { x: padL - 8, y: Y(v) + 4, fill: MUTED, 'font-size': 12, 'text-anchor': 'end', 'font-family': 'IBM Plex Mono, monospace' }, '$' + v + 'm'));
+    });
+    var band = (W - padL - padR) / DATA.length, bw = band * 0.56;
+    DATA.forEach(function (d, i) {
+      var cx = padL + band * i + band / 2, h = (H - padB) - Y(d[1]);
+      svg.appendChild(el('rect', { x: cx - bw / 2, y: Y(d[1]), width: bw, height: h, fill: RED, rx: 2, opacity: d[2] === 'actual' ? 1 : 0.82 }));
+      svg.appendChild(el('text', { x: cx, y: Y(d[1]) - 7, fill: INK, 'font-size': 12, 'text-anchor': 'middle', 'font-family': 'IBM Plex Mono, monospace' }, '$' + d[1] + 'm'));
+      svg.appendChild(el('text', { x: cx, y: H - padB + 18, fill: MUTED, 'font-size': 11.5, 'text-anchor': 'middle', 'font-family': 'IBM Plex Mono, monospace' }, "'" + d[0]));
+      if (d[2]) svg.appendChild(el('text', { x: cx, y: H - padB + 33, fill: MUTED, 'font-size': 10, 'text-anchor': 'middle', 'font-family': 'IBM Plex Mono, monospace' }, d[2]));
+    });
+    svg.appendChild(el('text', { x: padL, y: padT - 12, fill: AMBER, 'font-size': 11, 'font-family': 'IBM Plex Mono, monospace' }, 'forward estimates never forecast fines to fall'));
+    host.appendChild(svg);
+  }
+
   var f = document.getElementById('chart-fatalities');
   if (f) lineChart(f);
   var r = document.getElementById('chart-nsw-revenue');
   if (r) barChart(r);
+  var s = document.getElementById('chart-fines-share');
+  if (s) shareChart(s);
+  var fc = document.getElementById('chart-fines-forecast');
+  if (fc) forecastChart(fc);
 })();

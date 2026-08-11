@@ -5,6 +5,7 @@
     { href: '/', label: 'Home', key: 'home' },
     { href: '/strategy', label: 'The Strategy', key: 'strategy' },
     { href: '/money', label: 'The Money', key: 'money' },
+    { href: '/fund', label: 'The Fund', key: 'fund' },
     { href: '/tolls', label: 'Tolls', key: 'tolls' },
     { href: '/goldmines', label: 'Goldmines', key: 'goldmines' },
     { href: '/evidence', label: 'The Evidence', key: 'evidence' },
