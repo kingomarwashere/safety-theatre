@@ -8,6 +8,7 @@
     { href: '/fund', label: 'The Fund', key: 'fund' },
     { href: '/tolls', label: 'Tolls', key: 'tolls' },
     { href: '/goldmines', label: 'Goldmines', key: 'goldmines' },
+    { href: '/map', label: 'The Map', key: 'map' },
     { href: '/evidence', label: 'The Evidence', key: 'evidence' },
     { href: '/speed', label: 'Speed', key: 'speed' },
     { href: '/surveillance', label: 'Surveillance', key: 'surveillance' },
