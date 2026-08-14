@@ -31,20 +31,26 @@
   <p class="kicker">Data · The Map</p>
   <h1>Where the cameras are. Where you die.</h1>
   <p class="sub">
-    Two layers of real NSW government data on one map: every fixed and red-light speed camera, and
-    every crash that <em>killed or seriously injured</em> someone from 2020–2024 — animated year by
-    year. Hit play, then turn on <strong>Highways only</strong>. Watch the deaths light up on the
-    open road, far from the cameras clustered in the city.
+    Real government data on one map: every NSW fixed and red-light speed camera, and every crash that
+    <em>killed or seriously injured</em> someone (2020–2024) — animated year by year. Hit play, then
+    turn on <strong>Highways only</strong>: the deaths light up on the open road, far from the cameras
+    clustered in the city. Switch to <strong>QLD</strong> for <strong>25 years</strong> of fatal
+    crashes (2001–2025), and hit <em>Save image</em> to share any frame.
   </p>
 </section>
 
 <div class="mapwrap">
   <div class="maptools">
+    <div class="stswitch" role="group" aria-label="State">
+      <button class="stbtn" data-st="nsw" aria-pressed="true">NSW</button>
+      <button class="stbtn" data-st="qld" aria-pressed="false">QLD</button>
+    </div>
     <button class="play" id="play">▶ Play</button>
     <span class="yearlab" id="yearlab">2020</span>
     <input type="range" id="yr" min="2020" max="2024" step="1" value="2020" aria-label="Year" />
     <label class="tog"><input type="checkbox" id="tgCam" checked /> Cameras</label>
     <label class="tog"><input type="checkbox" id="tgRural" /> Highways only (≥90km/h)</label>
+    <button class="snap" id="snap">↓ Save image</button>
     <span class="readout" id="readout"></span>
   </div>
   <div id="map">
@@ -52,8 +58,8 @@
     <div class="maplegend">
       <div class="row"><span class="grad"></span> Crash density</div>
       <div class="row"><span class="dot" style="background:#ff2d55"></span> Fatal crash</div>
-      <div class="row"><span class="dot" style="background:#ffbe3d"></span> Fixed speed camera</div>
-      <div class="row"><span class="dot" style="background:#4fe39a"></span> Red-light + speed camera</div>
+      <div class="row leg-cam"><span class="dot" style="background:#ffbe3d"></span> Fixed speed camera</div>
+      <div class="row leg-cam"><span class="dot" style="background:#4fe39a"></span> Red-light + speed camera</div>
     </div>
   </div>
 </div>
@@ -80,7 +86,9 @@
     NSW does <em>not</em> publish the install date of each camera, so the camera layer can't animate —
     it shows current locations. (No government camera dataset in Australia carries per-site install
     dates; we checked.) Mobile, average-speed and phone-detection cameras aren't in the open location
-    data either, so they're not shown. The crash layer is complete and real, and it's what animates.
+    data either, so they're not shown. <strong>Queensland</strong> publishes crash coordinates back to
+    2001 but <em>no</em> camera coordinates at all — so the QLD view is fatal crashes only, no camera
+    layer. The crash data is complete and real, and it's what animates.
   </p>
 </section>
 
@@ -109,7 +117,8 @@
   <h2>Check the data yourself</h2>
   <ul class="checklist">
     <li><strong>Cameras</strong> — <a href="https://data.nsw.gov.au/data/dataset/d1ee41dd-35ce-4ee6-8615-392a0074a83e">NSW Speed Cameras</a> (fixed + red-light location CSVs, Transport for NSW, CC-BY).</li>
-    <li><strong>Crashes</strong> — <a href="https://data.gov.au/data/dataset/nsw-2-nsw-crash-data">NSW Road Crash Data 2020–2024</a> (Transport for NSW, CC-BY 3.0 AU) — 92,189 crashes; we mapped the 20,980 that killed or seriously injured someone.</li>
+    <li><strong>Crashes (NSW)</strong> — <a href="https://data.gov.au/data/dataset/nsw-2-nsw-crash-data">NSW Road Crash Data 2020–2024</a> (Transport for NSW, CC-BY 3.0 AU) — 92,189 crashes; we mapped the 20,980 that killed or seriously injured someone.</li>
+    <li><strong>Crashes (QLD)</strong> — <a href="https://www.data.qld.gov.au/dataset/crash-data-from-queensland-roads">Road crash locations, Queensland</a> (Queensland Government, CC-BY 4.0) — 2001–2025; we mapped the 6,391 fatal crashes.</li>
     <li><strong>Basemap</strong> — <a href="https://openfreemap.org/">OpenFreeMap</a> · © OpenStreetMap contributors.</li>
   </ul>
   <p class="disclaimer">Coordinates are as published by the agencies; crash points are placed to the nearest ~10m. This is public-record data presented faithfully — verify against the source before relying on any single point.</p>

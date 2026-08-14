@@ -81,7 +81,17 @@
     { cat: 'Surveillance', icon: 'eye', hook: 'Smile', num: '16/sec', size: '',
       head: 'Every plate. Logged. Guilty or not.',
       sub: "One ANPR unit reads 16 plates a second — all kept. ‘Safety’ cameras already enforced lockdowns.",
-      src: 'See “Surveillance”', page: 'surveillance' }
+      src: 'See “Surveillance”', page: 'surveillance' },
+
+    { cat: 'The Map', icon: 'pin', hook: "Look where they aren’t", num: '80%', size: '',
+      head: 'Of NSW speed cameras sit in Sydney.',
+      sub: 'But people are killed right across the state — on the country roads the cameras skip. Watch it on the map.',
+      src: 'TfNSW camera + crash data (CC-BY)', page: 'map' },
+
+    { cat: 'The Map', icon: 'gauge', hook: 'The open road', num: '~45%', size: '',
+      head: 'Of deaths are on the highways cameras ignore.',
+      sub: 'Nearly half of people killed die on ≥90km/h roads — far from the urban camera network. See it move over the years.',
+      src: 'NSW & QLD crash data (CC-BY)', page: 'map' }
   ];
 
   // Bold line-icons used as a faint background watermark on each card.

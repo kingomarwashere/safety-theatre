@@ -3,6 +3,13 @@
 .maptools{display:flex;flex-wrap:wrap;gap:.7rem 1.3rem;align-items:center;margin:0 0 1rem;padding:.95rem 1.1rem;border:1px solid var(--line);border-radius:12px;background:#100f0c}
 .maptools .play{font-family:var(--syne);font-weight:800;background:var(--red);color:#0B0B09;border:0;border-radius:8px;padding:.6rem 1.15rem;cursor:pointer;font-size:.92rem;white-space:nowrap}
 .maptools .play:hover{filter:brightness(1.08)}
+.stswitch{display:inline-flex;gap:.25rem;background:#0B0B09;border:1px solid var(--line);border-radius:9px;padding:.25rem}
+.stswitch .stbtn{font-family:var(--mono);font-size:.82rem;font-weight:600;letter-spacing:.05em;color:var(--muted);background:transparent;border:0;border-radius:6px;padding:.42rem .7rem;cursor:pointer;transition:.15s}
+.stswitch .stbtn:hover{color:var(--ink)}
+.stswitch .stbtn[aria-pressed="true"]{background:var(--red);color:#0B0B09}
+.maptools .snap{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:#161511;border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;cursor:pointer;white-space:nowrap}
+.maptools .snap:hover{border-color:var(--red);color:var(--red)}
+.maptools label.tog input:disabled{cursor:not-allowed}
 .maptools .yearlab{font-family:var(--syne);font-weight:800;font-size:1.7rem;color:var(--ink);min-width:3.6ch;text-align:center}
 .maptools input[type=range]{flex:1;min-width:150px;accent-color:var(--red);cursor:pointer}
 .maptools label.tog{font-family:var(--mono);font-size:.8rem;color:var(--muted);display:inline-flex;gap:.42rem;align-items:center;cursor:pointer;white-space:nowrap}
