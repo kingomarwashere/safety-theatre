@@ -200,3 +200,6 @@ footer .footlinks a:hover{color:var(--red)}
 .consent-cta .whistle{margin-top:1.7rem;padding-top:1.3rem;border-top:1px solid var(--line);font-size:.98rem;color:var(--body);max-width:66ch}
 .consent-cta .whistle b{color:var(--ink)}
 .consent-cta .whistle a{font-weight:600}
+
+.foot-report a{color:var(--red);font-weight:600;font-size:.92rem;text-decoration:none}
+.foot-report a:hover{text-decoration:underline}

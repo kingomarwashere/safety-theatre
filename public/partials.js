@@ -25,6 +25,7 @@
     { href: '/court', label: 'The Court Trap', key: 'court' },
     { href: '/solutions', label: 'What Works', key: 'solutions' },
     { href: '/share', label: 'Shareables', key: 'share' },
+    { href: '/report', label: 'Report (PDF)', key: 'report' },
     { href: '/sources', label: 'Sources', key: 'sources' },
   ];
   const current = document.body.getAttribute('data-page') || 'home';
@@ -72,6 +73,7 @@
     <p class="foot-brand">SAFETY<span> </span>THEATRE</p>
     <p>An independent, fact-checkable exposé of revenue-raising and mass surveillance
        dressed up as road safety in Australia.</p>
+    <p class="foot-report"><a href="/report">↓ Read or download the whole thing as a printable PDF report</a></p>
     <div class="footlinks">
       ${PAGES.filter((p) => p.key !== 'home').map((p) => `<a href="${p.href}">${p.label}</a>`).join('')}
       <a href="https://github.com/kingomarwashere/safety-theatre">Source / corrections</a>
