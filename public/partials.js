@@ -9,6 +9,7 @@
     { href: '/tolls', label: 'Tolls', key: 'tolls' },
     { href: '/goldmines', label: 'Goldmines', key: 'goldmines' },
     { href: '/map', label: 'The Map', key: 'map' },
+    { href: '/check', label: 'Check Your Street', key: 'check' },
     { href: '/evidence', label: 'The Evidence', key: 'evidence' },
     { href: '/speed', label: 'Speed', key: 'speed' },
     { href: '/surveillance', label: 'Surveillance', key: 'surveillance' },
@@ -24,6 +25,7 @@
     { href: '/delegations', label: 'The Law', key: 'delegations' },
     { href: '/court', label: 'The Court Trap', key: 'court' },
     { href: '/solutions', label: 'What Works', key: 'solutions' },
+    { href: '/myths', label: 'Myth-Busting', key: 'myths' },
     { href: '/share', label: 'Shareables', key: 'share' },
     { href: '/report', label: 'Report (PDF)', key: 'report' },
     { href: '/sources', label: 'Sources', key: 'sources' },
@@ -37,8 +39,20 @@
   const header = document.createElement('header');
   header.className = 'nav';
   header.innerHTML =
-    `<a class="brand" href="/">SAFETY<span>&nbsp;</span>THEATRE</a><nav>${links}</nav>`;
+    `<a class="brand" href="/">SAFETY<span>&nbsp;</span>THEATRE</a>` +
+    `<button class="navtoggle" aria-label="Menu" aria-expanded="false">☰ Menu</button>` +
+    `<nav>${links}</nav>`;
   document.body.insertBefore(header, document.body.firstChild);
+
+  // Mobile menu toggle
+  const tog = header.querySelector('.navtoggle');
+  tog.addEventListener('click', () => {
+    const open = header.classList.toggle('open');
+    tog.setAttribute('aria-expanded', open ? 'true' : 'false');
+    tog.textContent = open ? '✕ Close' : '☰ Menu';
+  });
+  header.querySelectorAll('nav a').forEach((a) =>
+    a.addEventListener('click', () => { header.classList.remove('open'); tog.setAttribute('aria-expanded', 'false'); tog.textContent = '☰ Menu'; }));
 
   // Site-wide consent / direct-democracy call-to-action (before the footer, every page).
   const cta = document.createElement('section');

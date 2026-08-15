@@ -26,6 +26,7 @@ const SECTIONS = [
   ['delegations', '17', 'The Law'],
   ['court', '18', 'The Court Trap'],
   ['solutions', '19', 'What Actually Works'],
+  ['myths', '20', 'Every Excuse, Answered'],
   ['act', 'A', 'Appendix A — Take Action (FOI/GIPA templates)'],
   ['sources', 'B', 'Appendix B — Sources'],
 ];
@@ -42,13 +43,13 @@ let sectionsHtml = '';
 let toc = '';
 for (const [file, num, label] of SECTIONS) {
   const html = fs.readFileSync(path.join(PUB, file + '.html'), 'utf8');
-  const phead = clean(grab(html, /<section class="phead">([\s\S]*?)<\/section>/));
-  const main = clean(grab(html, /<main>([\s\S]*?)<\/main>/));
+  // Capture everything from the page header through the end of <main> (includes any
+  // full-width content between them, e.g. the myth list).
+  const content = clean(grab(html, /(<section class="phead">[\s\S]*?<\/main>)/));
   toc += `<li><span class="tnum">${num}</span><a href="#s-${file}">${label}</a></li>`;
   sectionsHtml += `<section class="rsec" id="s-${file}">
     <div class="rsec-tag">${num} · Safety Theatre</div>
-    <section class="phead">${phead}</section>
-    <main>${main}</main>
+    ${content}
   </section>`;
 }
 

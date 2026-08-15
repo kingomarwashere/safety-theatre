@@ -7,6 +7,7 @@
   <url><loc>https://safetytheatre.theradicalparty.com/tolls</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/goldmines</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/map</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/check</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/evidence</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/speed</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/surveillance</loc><priority>0.9</priority></url>
@@ -22,6 +23,7 @@
   <url><loc>https://safetytheatre.theradicalparty.com/delegations</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/court</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/solutions</loc><priority>0.9</priority></url>
+  <url><loc>https://safetytheatre.theradicalparty.com/myths</loc><priority>0.9</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/share</loc><priority>0.8</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/report</loc><priority>0.7</priority></url>
   <url><loc>https://safetytheatre.theradicalparty.com/sources</loc><priority>0.8</priority></url>

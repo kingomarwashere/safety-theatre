@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Check your street — cameras vs crashes near you | Safety Theatre</title>
+<meta name="description" content="Type any NSW suburb or postcode and see the nearest fixed and red-light speed cameras versus the real road-trauma record within 5km. Find out if your area is a camera goldmine or an ignored blackspot." />
+<meta name="theme-color" content="#0B0B09" />
+<meta property="og:image" content="https://safetytheatre.theradicalparty.com/img/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://safetytheatre.theradicalparty.com/img/og.png" />
+<meta property="og:title" content="Check your street — cameras vs crashes near you" />
+<meta property="og:description" content="Type your NSW suburb: see the nearest speed cameras vs the real death and serious-injury record within 5km. Goldmine or ignored blackspot?" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="/check.css" />
+</head>
+<body data-page="check">
+
+<section class="phead">
+  <p class="kicker">Tool · Check your street</p>
+  <h1>Is your area a goldmine — or ignored?</h1>
+  <p class="sub">
+    Type any NSW suburb or postcode. You'll see the nearest fixed and red-light speed cameras against
+    the real record of people <em>killed and seriously injured</em> within 5&nbsp;km. Some suburbs are
+    ringed with cameras; some country towns bury people every year with the nearest camera 150&nbsp;km away.
+  </p>
+</section>
+
+<div class="checkwrap">
+  <div class="searchbox">
+    <div class="searchrow">
+      <input id="q" type="text" autocomplete="off" disabled placeholder="Loading data…" aria-label="Suburb or postcode" />
+      <button id="geo" type="button">📍 Use my location</button>
+    </div>
+    <div class="suggest" id="sug"></div>
+  </div>
+  <div class="result" id="res" hidden></div>
+</div>
+
+<main>
+<section class="block">
+  <h2>What this shows</h2>
+  <p>
+    It's the same open government data behind <a href="/map">the map</a>, made personal. For the spot you
+    pick, it finds every <strong>fixed and red-light speed camera</strong> within 10&nbsp;km and counts the
+    <strong>deaths and serious injuries</strong> within 5&nbsp;km (2020–2024). The pattern repeats across the
+    state: cameras cluster where the traffic — and the revenue — is thickest, while a lot of the dying
+    happens where there are no cameras at all. That's the point made on <a href="/goldmines">The Goldmines</a>.
+  </p>
+  <p class="callout warn">
+    <span class="h">Read it honestly</span>
+    This counts only the cameras whose locations NSW publishes — <strong>fixed and red-light</strong>.
+    <em>Mobile</em> speed cameras (the ones in parked cars) and average-speed and phone-detection cameras
+    <strong>are not in the open data</strong>, and mobile cameras do operate on country roads. So "0 cameras
+    nearby" means no fixed/red-light cameras — not no enforcement. The crash numbers, by contrast, are the
+    complete record.
+  </p>
+  <p class="src">Data: <a href="https://data.nsw.gov.au/data/dataset/d1ee41dd-35ce-4ee6-8615-392a0074a83e">NSW Speed Cameras</a> and <a href="https://data.gov.au/data/dataset/nsw-2-nsw-crash-data">NSW Road Crash Data 2020–2024</a> (Transport for NSW, CC-BY); suburb coordinates from the open Australian postcode dataset. Everything runs in your browser — nothing you type is sent anywhere.</p>
+</section>
+</main>
+
+<nav class="pagenav">
+  <a href="/map"><span class="dir">← Previous</span>The Map</a>
+  <a class="nx" href="/evidence"><span class="dir">Next →</span>The Evidence</a>
+</nav>
+
+<script src="/partials.js"></script>
+<script src="/check.js"></script>
+</body>
+</html>

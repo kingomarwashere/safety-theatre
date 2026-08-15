@@ -69,4 +69,10 @@
   .vs > div { border: 1px solid #ddd !important; background: #f6f4ef !important; padding: 3mm !important; }
   .rsec.closing { border-top: 2px solid #b3123c !important; page-break-before: always; }
   .strike { text-decoration: line-through; }
+  .mythlist { padding: 0 !important; max-width: none !important; }
+  .myth { border-top: 1px solid #ddd !important; padding: 4mm 0 !important; page-break-inside: avoid; }
+  .myth-claim { color: #000 !important; }
+  .myth-claim::before { color: #b3123c !important; }
+  .myth-real { color: #1b1b1b !important; max-width: none !important; }
+  .myth-real .lbl { color: #b3123c !important; }
 }
